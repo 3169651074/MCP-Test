@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "node",
+      "args": ["D:\\Code\\MCP-Test\\src\\index.ts"]
+    }
+  }
+}
