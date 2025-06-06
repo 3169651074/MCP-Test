@@ -1,14 +1,16 @@
 console.log('BVtkNodes MCP Server starting...')
 
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { z } from "zod";
+import {McpServer} from "@modelcontextprotocol/sdk/server/mcp.js";
+import {StdioServerTransport} from "@modelcontextprotocol/sdk/server/stdio.js";
+import {z} from "zod";
 import * as fs from 'fs';
 import * as path from 'path';
-import { exec } from 'child_process';
-import { promisify } from 'util';
+import {exec} from 'child_process';
+import {promisify} from 'util';
 
 const execAsync = promisify(exec);
+
+const blenderPath = "C:\\Program Files\\Blender Foundation\\Blender 4.2";
 
 // Create server instance
 const server = new McpServer({
@@ -53,7 +55,7 @@ function validateBVtkConfig(jsonData: any): boolean {
 
 // Helper function to generate Blender Python script
 function generateBlenderScript(configData: any, outputPath?: string): string {
-    const script = `
+    return `
 import bpy
 import json
 import os
@@ -185,8 +187,6 @@ except Exception as e:
     print(f"Error importing BVtkNodes configuration: {e}")
     exit(1)
 `;
-
-    return script;
 }
 
 // Tool: Import JSON configuration to Blender
@@ -247,7 +247,7 @@ server.tool(
                 const possiblePaths = [
                     'blender',
                     '/Applications/Blender.app/Contents/MacOS/Blender',
-                    'C:\\Program Files\\Blender Foundation\\Blender\\blender.exe',
+                    blenderPath + "\\blender.exe",
                     '/usr/bin/blender',
                     '/snap/bin/blender'
                 ];
@@ -258,7 +258,7 @@ server.tool(
                         blender_executable = path;
                         break;
                     } catch (error) {
-                        continue;
+
                     }
                 }
 
