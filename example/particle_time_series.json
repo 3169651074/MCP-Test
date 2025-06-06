@@ -1,0 +1,312 @@
+{
+    "links": [
+        {
+            "from_node_name": "vtkPolyDataReader",
+            "from_socket_identifier": "output",
+            "to_node_name": "Time Selector",
+            "to_socket_identifier": "input"
+        },
+        {
+            "from_node_name": "Time Selector",
+            "from_socket_identifier": "output",
+            "to_node_name": "vtkPolyDataNormals",
+            "to_socket_identifier": "input"
+        },
+        {
+            "from_node_name": "vtkPolyDataNormals",
+            "from_socket_identifier": "output",
+            "to_node_name": "Info",
+            "to_socket_identifier": "input"
+        },
+        {
+            "from_node_name": "vtkPolyDataNormals",
+            "from_socket_identifier": "output",
+            "to_node_name": "Color Mapper",
+            "to_socket_identifier": "input"
+        },
+        {
+            "from_node_name": "Color Ramp",
+            "from_socket_identifier": "lookupTable",
+            "to_node_name": "Color Mapper",
+            "to_socket_identifier": "lookuptable"
+        },
+        {
+            "from_node_name": "Color Mapper",
+            "from_socket_identifier": "output",
+            "to_node_name": "VTK To Blender Mesh.001",
+            "to_socket_identifier": "input"
+        }
+    ],
+    "nodes": [
+        {
+            "bl_idname": "BVTK_Node_InfoType",
+            "color": [
+                0.30000001192092896,
+                0.5,
+                0.10000000149011612
+            ],
+            "custom_code": "",
+            "height": 100.0,
+            "hide": false,
+            "label": "",
+            "location": [
+                34.03572463989258,
+                16.92273712158203
+            ],
+            "mute": false,
+            "name": "Info",
+            "show_options": true,
+            "show_preview": false,
+            "width": 572.0986328125
+        },
+        {
+            "bl_idname": "VTKPolyDataReaderType",
+            "color": [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+            ],
+            "custom_code": "",
+            "height": 100.0,
+            "hide": false,
+            "label": "",
+            "location": [
+                -202.96861267089844,
+                352.7839050292969
+            ],
+            "m_FieldDataName": "",
+            "m_FileName": "/home/kzheng/dev/simulation/data/vtk_case/particle_mesh/particle_000000000037500.vtk",
+            "m_LookupTableName": "",
+            "m_NormalsName": "",
+            "m_ObjectName": "",
+            "m_ReadAllColorScalars": true,
+            "m_ReadAllFields": true,
+            "m_ReadAllNormals": false,
+            "m_ReadAllScalars": true,
+            "m_ReadAllTCoords": true,
+            "m_ReadAllTensors": true,
+            "m_ReadAllVectors": true,
+            "m_ReadFromInputString": false,
+            "m_ScalarsName": "",
+            "m_TCoordsName": "",
+            "m_TensorsName": "",
+            "m_VectorsName": "",
+            "mute": false,
+            "name": "vtkPolyDataReader",
+            "show_options": true,
+            "show_preview": false,
+            "width": 200.0
+        },
+        {
+            "bl_idname": "BVTK_Node_TimeSelectorType",
+            "color": [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+            ],
+            "custom_code": "",
+            "height": 100.0,
+            "hide": false,
+            "label": "",
+            "location": [
+                27.930517196655273,
+                359.4188537597656
+            ],
+            "mute": false,
+            "name": "Time Selector",
+            "show_options": true,
+            "show_preview": false,
+            "time_index": 10000,
+            "use_scene_time": true,
+            "width": 200.0
+        },
+        {
+            "bl_idname": "VTKPolyDataNormalsType",
+            "color": [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+            ],
+            "custom_code": "",
+            "height": 100.0,
+            "hide": false,
+            "label": "",
+            "location": [
+                256.8580017089844,
+                663.675537109375
+            ],
+            "m_AutoOrientNormals": true,
+            "m_ComputeCellNormals": true,
+            "m_ComputePointNormals": true,
+            "m_Consistency": true,
+            "m_FeatureAngle": 29.45998764038086,
+            "m_FlipNormals": true,
+            "m_NonManifoldTraversal": true,
+            "m_ObjectName": "",
+            "m_Splitting": true,
+            "mute": false,
+            "name": "vtkPolyDataNormals",
+            "show_options": true,
+            "show_preview": false,
+            "width": 200.0
+        },
+        {
+            "additional_properties": {
+                "elements": [
+                    [
+                        [
+                            0.49803921580314636,
+                            0.23137255012989044,
+                            0.0313725508749485,
+                            1.0
+                        ],
+                        0.0
+                    ],
+                    [
+                        [
+                            0.7746251225471497,
+                            0.4129181206226349,
+                            0.046136099845170975,
+                            1.0
+                        ],
+                        0.125
+                    ],
+                    [
+                        [
+                            0.9765474796295166,
+                            0.6925028562545776,
+                            0.34571319818496704,
+                            1.0
+                        ],
+                        0.25
+                    ],
+                    [
+                        [
+                            0.9885428547859192,
+                            0.903191089630127,
+                            0.783698558807373,
+                            1.0
+                        ],
+                        0.375
+                    ],
+                    [
+                        [
+                            0.8804305791854858,
+                            0.8861207365989685,
+                            0.9344867467880249,
+                            1.0
+                        ],
+                        0.5
+                    ],
+                    [
+                        [
+                            0.6711264848709106,
+                            0.6404460072517395,
+                            0.8030757308006287,
+                            1.0
+                        ],
+                        0.625
+                    ],
+                    [
+                        [
+                            0.4004613757133484,
+                            0.27566319704055786,
+                            0.5914648175239563,
+                            1.0
+                        ],
+                        0.75
+                    ],
+                    [
+                        [
+                            0.1764705926179886,
+                            0.0,
+                            0.29411765933036804,
+                            1.0
+                        ],
+                        0.875
+                    ]
+                ]
+            },
+            "bl_idname": "BVTK_Node_ColorRampType",
+            "cm_nr_values": 8,
+            "cm_preset": "PuOr",
+            "color": [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+            ],
+            "custom_code": "",
+            "height": 100.0,
+            "hide": false,
+            "label": "",
+            "location": [
+                266.702880859375,
+                314.49468994140625
+            ],
+            "mute": false,
+            "name": "Color Ramp",
+            "show_options": true,
+            "show_preview": false,
+            "texture_name": "texture1",
+            "width": 200.0
+        },
+        {
+            "auto_range": true,
+            "bl_idname": "BVTK_Node_ColorMapperType",
+            "color": [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+            ],
+            "color_by": "C_id",
+            "custom_code": "",
+            "height": 5.5,
+            "hide": false,
+            "label": "",
+            "location": [
+                515.9039306640625,
+                365.35601806640625
+            ],
+            "lut": false,
+            "max": 499.0,
+            "min": 0.0,
+            "mute": false,
+            "name": "Color Mapper",
+            "show_options": true,
+            "show_preview": false,
+            "texture_name": "",
+            "width": 200.0
+        },
+        {
+            "bl_idname": "BVTK_Node_VTKToBlenderMeshType",
+            "color": [
+                0.30000001192092896,
+                0.30000001192092896,
+                0.30000001192092896
+            ],
+            "create_all_verts": false,
+            "create_edges": true,
+            "create_faces": true,
+            "custom_code": "",
+            "generate_material": true,
+            "height": 100.0,
+            "hide": false,
+            "label": "",
+            "location": [
+                770.6729125976562,
+                361.1626892089844
+            ],
+            "m_Name": "stones",
+            "motion_blur": false,
+            "motion_blur_by": "",
+            "motion_blur_time_step": 1.0,
+            "mute": false,
+            "name": "VTK To Blender Mesh.001",
+            "recalc_norms": false,
+            "show_options": true,
+            "show_preview": false,
+            "smooth": true,
+            "width": 200.0
+        }
+    ]
+}

@@ -14,7 +14,7 @@ import os
 
 # 配置区域 - 请修改以下路径
 # Windows下，路径之间需要使用双反斜杠，Linux下使用一个正斜杠即可（绝对路径）
-JSON_FILE_PATH = "C:\\Users\\31696\\Desktop\\simulation\\particle_time_series.json"
+JSON_FILE_PATH = "C:\\Users\\31696\\Desktop\\particle_time_series.json"
 NODE_TREE_NAME = "BVTK Node Tree"  # 节点树名称
 CLEAR_EXISTING = True  # 是否清空现有节点
 
