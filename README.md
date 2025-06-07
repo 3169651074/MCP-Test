@@ -1,4 +1,4 @@
-MCP服务器使用TYpeScript编写  
+MCP服务器使用TypeScript编写  
 以下安装命令可能需要网络代理  
 
 **升级nodejs和npm：**  
