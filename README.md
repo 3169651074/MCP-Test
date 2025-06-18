@@ -17,7 +17,7 @@ MCP服务器使用TypeScript编写
 4.npm install -D @types/node typescript  
 
 **修改代码：**
-由于使用Typescript，每次修改index.ts后，都需要使用npm build编译为js
+由于使用Typescript，每次修改index.ts后，都需要使用npm run build编译为js，编译后的js文件存储在build目录下
 
 **启动MCP服务：**
 1.使用npm start启动MCP Server  
