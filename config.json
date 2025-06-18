@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bvtknodes-importer": {
+      "command": "node",
+      "args": ["D:\\Code\\MCP-Test\\src\\index.ts"]
+    }
+  }
+}
