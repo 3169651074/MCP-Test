@@ -20,5 +20,5 @@ MCP服务器使用TypeScript编写
 由于使用Typescript，每次修改index.ts后，都需要使用npm build编译为js
 
 **启动MCP服务：**
-1.使用npm start启动MCP Server
+1.使用npm start启动MCP Server  
 2.在支持MCP的客户端（Cherry Studio，Claude Desktop）中导入此MCP的配置json：config.json（位于此项目根目录下）
